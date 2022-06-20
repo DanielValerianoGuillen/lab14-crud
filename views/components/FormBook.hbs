@@ -1,0 +1,26 @@
+{{#if idform}}
+<div class="row justify-content-md-center align-items-center">
+    <div class="form-group w-50">
+        <form action="/libros/editar/{{idform._id}}" method="post">
+            <input value="{{idform.titulo}}" type="text" placeholder="Titulo Libro" name="titulo"
+                class="form-control my-2" />
+            <input value="{{idform.genero}}" type="text" placeholder="Genero de  Libro" name="genero"
+                class="form-control my-2" />
+            <input value="{{idform.autor}}" type="text" placeholder="Autor de Libro" name="autor"
+                class="form-control my-2" />
+            <button type="submit" class="btn btn-warning w-100 mb-2">Editar Libro</button>
+        </form>
+    </div>
+</div>
+{{else}}
+<div class="row justify-content-md-center align-items-center">
+    <div class="form-group w-50">
+        <form action="/libros" method="post">
+            <input type="text" placeholder="Titulo Libro" name="titulo" class="form-control my-2" />
+            <input type="text" placeholder="Genero de  Libro" name="genero" class="form-control my-2" />
+            <input type="text" placeholder="Autor de Libro" name="autor" class="form-control my-2" />
+            <button type="submit" class="btn btn-primary w-100 mb-2">Agregar Libro</button>
+        </form>
+    </div>
+</div>
+{{/if}}

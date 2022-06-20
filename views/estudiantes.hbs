@@ -1,0 +1,37 @@
+<div class="container">
+    <div>
+        <a href="/formStudent" class="btn btn-success">Agregar Estudiante</a>
+    </div>
+
+    <table class="table" border="1">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Edad</th>
+                <th scope="col">genero</th>
+                <th scope="col">Colegio</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+
+        {{#each estudiante}}
+        <tbody>
+            <tr>
+                <th>{{this.nombre}}</th>
+                <th>{{this.apellido}}</th>
+                <th>{{this.edad}}</th>
+                <th>{{this.genero}}</th>
+                <th>{{this.colegio}}</th>
+                <th><img src="{{this.imagen}}" width="50" height="50" /></th>
+                <th>
+                    <a href="/estudiantes/eliminar/{{this._id}}" class="btn btn-danger">Eliminar</a>
+                    <a href="/estudiantes/editar/{{this._id}}" class="btn btn-warning">Editar</a>
+                    <a href="/bucket" class="btn btn-success">Ver que se guarda los datos</a>
+                </th>
+            </tr>
+        </tbody>
+        {{/each}}
+    </table>
+</div>

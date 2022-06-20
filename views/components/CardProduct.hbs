@@ -1,0 +1,13 @@
+
+<div class="row justify-content-md-center align-items-center">
+<article class="card w-50 mb-2  text-center  text-white bg-dark "style="width: 18rem;" >
+    <div class="card-body tex-center ">
+        <p>Nombre del Producto:<span style="color:red">{{this.nombre}}</span> ||  Cantidad: #<span style="color:red">{{this.cantidad}}</span></p>
+        <p>Precio por unidad: $/<span style="color:red">{{this.precio}}</span> || Total a Pagar: $/<span style="color:red">{{this.total}}</span> </p>
+        <br>
+        <img src="{{this.imagen}}" width="60" height="60">
+        <a href="/eliminar/{{item._id}}" class="btn btn-danger">Eliminar</a>
+        <a href="/editar/{{item._id}}" class="btn btn-warning">Editar</a>
+    </div>
+</article>
+</div>

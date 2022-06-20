@@ -1,0 +1,37 @@
+{{#if idform}}
+
+<div class="row justify-content-md-center align-items-center">
+    <div class="form-group w-50">
+        <form action="/estudiantes/editar/{{idform._id}}" method="post" enctype="multipart/form-data">
+            <input value="{{idform.nombre}}" type="text"  placeholder="Nombre del estudiante" name="nombre"
+                class="form-control my-2" />
+            <input value="{{idform.apellido}}" type="text" placeholder="Apellido del estudiante" name="apellido"
+                class="form-control my-2" />
+            <input value="{{idform.edad}}" type="text" placeholder="Edad del estudiante" name="edad"
+                class="form-control my-2" />
+            <input value="{{idform.genero}}" type="text" placeholder="Genero" name="genero"
+                class="form-control my-2" />
+            <input value="{{idform.colegio}}" type="text" placeholder="Colegio" name="colegio"
+                class="form-control my-2" />
+            <input value="{{idform.imagen}}" type="file" class="form-control my-2" name="file" />
+            <button type="submit" class="btn btn-warning w-100 mb-2">Editar Estudiante</button>
+        </form>
+    </div>
+</div>
+{{else}}
+<div class="row justify-content-md-center align-items-center">
+    <div class="form-group w-50">
+        <form action="/estudiantes" method="post" enctype="multipart/form-data">
+            <input type="text" placeholder="Nombre del estudiante" name="nombre" class="form-control my-2" />
+            <input type="text" placeholder="Apellido del estudiante" name="apellido" class="form-control my-2" />
+            <input type="text" placeholder="Edad del estudiante" name="edad" class="form-control my-2" />
+            <input type="text" placeholder="Genero" name="genero" class="form-control my-2" />
+            <input type="text" placeholder="Colegio" name="colegio" class="form-control my-2" />
+            <input type="file"  name="file" >
+            <button type="submit" class="btn btn-primary w-100 mb-2">Insertar
+                Estudiante</button>
+        </form>
+    </div>
+
+</div>
+{{/if}}

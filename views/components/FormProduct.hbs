@@ -1,0 +1,34 @@
+{{#if idform}}
+
+<div class="row justify-content-md-center align-items-center">
+    <div class="form-group w-50">
+        <form action="/editar/{{idform._id}}" method="post">
+            <input value="{{idform.nombre}}" type="text" placeholder="Ingresar Del Producto" name="nombre"
+                class="form-control my-2" />
+            <input value="{{idform.cantidad}}" type="number" placeholder="Ingresar Cantidad" name="cantidad"
+                class="form-control my-2" />
+            <input value="{{idform.precio}}" type="number" placeholder="Ingresar Precio" name="precio"
+                class="form-control my-2" />
+            <button type="submit" class="btn btn-warning w-100 mb-2">Editar Producto</button>
+        </form>
+    </div>
+</div>
+
+{{else}}
+
+<div class="row justify-content-md-center align-items-center">
+    <div class="form-group w-50">
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="text" placeholder="Ingresar nombre del Producto" name="nombre" class="form-control my-2" />
+            <input type="number" placeholder="Ingresar la Cantidad" name="cantidad" class="form-control my-2" />
+            <input type="number" placeholder="Ingresar el Precio" name="precio" class="form-control my-2" />
+            <h4>Agregar imagen</h4>
+            <input type="file" name="file" >
+            <button type="submit" class="btn btn-primary w-100 mb-2">Agregar
+                Producto</button>
+        </form>
+    </div>
+
+</div>
+
+{{/if}}

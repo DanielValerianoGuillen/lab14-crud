@@ -1,0 +1,10 @@
+<div class="row justify-content-md-center align-items-center">
+<article class="card w-50 mb-2  text-center  text-white bg-dark "style="width: 18rem;" >
+    <div class="card-body tex-center ">
+        <p>Titulo del Libro:<span style="color:red">{{this.titulo}}</span> ||  Género: <span style="color:red">{{this.genero}}</span></p>
+        <p>Autor: <span style="color:red">{{this.autor}}</span> </p>
+        <a href="/libros/eliminar/{{item._id}}" class="btn btn-danger">Eliminar</a>
+        <a href="/libros/editar/{{item._id}}" class="btn btn-warning">Editar</a>
+    </div>
+</article>
+</div>
